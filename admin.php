@@ -31,7 +31,7 @@ if(isset($_GET['delete'])) {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Admin Pro - Takapedia</title>
+    <title>Admin - OprekTech</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body { font-family: sans-serif; background: #f4f4f4; padding: 20px; }
