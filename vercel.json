@@ -4,13 +4,14 @@
     { "src": "index.php", "use": "vercel-php@0.7.1" },
     { "src": "admin.php", "use": "vercel-php@0.7.1" },
     { "src": "go.php", "use": "vercel-php@0.7.1" },
-    { "src": "fix.php", "use": "vercel-php@0.7.1" }
+    { "src": "fix.php", "use": "vercel-php@0.7.1" },
+    { "src": "1768141321473.jpg", "use": "@vercel/static" }
   ],
   "routes": [
-    { "src": "/admin", "dest": "/admin.php" },
-    { "src": "/go/(?<id>.*)", "dest": "/go.php?id=$id" },
-    { "src": "/fix", "dest": "/fix.php" },
     { "src": "/1768141321473.jpg", "dest": "/1768141321473.jpg" },
+    { "src": "/admin", "dest": "/admin.php" },
+    { "src": "/go/(.*)", "dest": "/go.php?id=$1" },
+    { "src": "/fix", "dest": "/fix.php" },
     { "src": "/(.*)", "dest": "/index.php" }
   ]
 }
