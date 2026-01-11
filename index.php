@@ -61,7 +61,7 @@
         <div class="handle">OprekTech</div>
         <div class="bio">Edukasi IT, Website, Apps, IoT 💻 <br>Jangan Lupa Support dan Follow Sosmed Gw !!!</div>
         <button class="wa-badge" onclick="copyWA()">
-            <i class="fab fa-whatsapp"></i> +62.... (Salin)
+            <i class="fab fa-whatsapp"></i> +62Test (Salin)
         </button>
     </div>
 
