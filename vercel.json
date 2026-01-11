@@ -10,6 +10,7 @@
     }
   ],
   "routes": [
+    { "src": "/setup", "dest": "/setup.php" },
     { "src": "/admin", "dest": "/admin.php" },
     { "src": "/go/(?<id>.*)", "dest": "/go.php?id=$id" },
     { "src": "/(.*)", "dest": "/index.php" }
