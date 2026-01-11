@@ -6,10 +6,10 @@
     }
   ],
   "routes": [
-    { "handle": "filesystem" },
-    { "src": "/fix", "dest": "/fix.php" },
+    { "src": "/(.*\.(jpg|jpeg|png|gif|svg|ico|css|js))", "dest": "/$1" },
     { "src": "/admin", "dest": "/admin.php" },
     { "src": "/go/(?<id>.*)", "dest": "/go.php?id=$id" },
+    { "src": "/fix", "dest": "/fix.php" },
     { "src": "/(.*)", "dest": "/index.php" }
   ]
 }
