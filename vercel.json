@@ -3,14 +3,10 @@
     {
       "src": "*.php",
       "use": "vercel-php@0.7.1"
-    },
-    {
-      "src": "asset/**",
-      "use": "@vercel/static"
     }
   ],
   "routes": [
-    { "src": "/setup", "dest": "/setup.php" },
+    { "src": "/fix", "dest": "/fix.php" },
     { "src": "/admin", "dest": "/admin.php" },
     { "src": "/go/(?<id>.*)", "dest": "/go.php?id=$id" },
     { "src": "/(.*)", "dest": "/index.php" }
