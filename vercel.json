@@ -6,6 +6,7 @@
     }
   ],
   "routes": [
+    { "handle": "filesystem" },
     { "src": "/fix", "dest": "/fix.php" },
     { "src": "/admin", "dest": "/admin.php" },
     { "src": "/go/(?<id>.*)", "dest": "/go.php?id=$id" },
