@@ -1,10 +1,11 @@
 {
   "functions": {
-    "api/*.php": {
+    "*.php": {
       "runtime": "vercel-php@0.7.0"
     }
   },
   "routes": [
+    { "handle": "filesystem" },
     { "src": "/admin", "dest": "/admin.php" },
     { "src": "/go/(?<id>.*)", "dest": "/go.php?id=$id" },
     { "src": "/(.*)", "dest": "/index.php" }
