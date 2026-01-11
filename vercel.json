@@ -1,15 +1,18 @@
 {
-  "builds": [
-    {
-      "src": "*.php",
-      "use": "vercel-php@0.7.1"
-    }
-  ],
+  "functions": {
+    "index.php": { "runtime": "vercel-php@0.7.1" },
+    "admin.php": { "runtime": "vercel-php@0.7.1" },
+    "go.php": { "runtime": "vercel-php@0.7.1" },
+    "fix.php": { "runtime": "vercel-php@0.7.1" },
+    "setup.php": { "runtime": "vercel-php@0.7.1" },
+    "gas.php": { "runtime": "vercel-php@0.7.1" }
+  },
   "routes": [
-    { "src": "/(.*?\\.(jpg|jpeg|png|gif|svg|ico|css|js))", "dest": "/$1" },
+    { "handle": "filesystem" },
     { "src": "/admin", "dest": "/admin.php" },
     { "src": "/go/(?<id>.*)", "dest": "/go.php?id=$id" },
     { "src": "/fix", "dest": "/fix.php" },
+    { "src": "/setup", "dest": "/setup.php" },
     { "src": "/(.*)", "dest": "/index.php" }
   ]
 }
