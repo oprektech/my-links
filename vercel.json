@@ -1,11 +1,15 @@
 {
-  "functions": {
-    "*.php": {
-      "runtime": "vercel-php@0.7.0"
+  "builds": [
+    {
+      "src": "*.php",
+      "use": "vercel-php@0.7.0"
+    },
+    {
+      "src": "asset/**",
+      "use": "@vercel/static"
     }
-  },
+  ],
   "routes": [
-    { "handle": "filesystem" },
     { "src": "/admin", "dest": "/admin.php" },
     { "src": "/go/(?<id>.*)", "dest": "/go.php?id=$id" },
     { "src": "/(.*)", "dest": "/index.php" }
