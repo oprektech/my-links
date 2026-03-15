@@ -1,14 +1,12 @@
 <?php
 
-$host = "db.oaecibokcofhmhzdojakdb.supabase.co";
-$port = "5432";
-$db   = "postgres";
-$user = "postgres";
-$pass = "Yoga2309071945";
+$host = getenv("MYSQLHOST");
+$user = getenv("MYSQLUSER");
+$pass = getenv("MYSQLPASSWORD");
+$db   = getenv("MYSQLDATABASE");
+$port = getenv("MYSQLPORT");
 
-$conn = pg_connect(
-  "host=$host port=$port dbname=$db user=$user password=$pass"
-);
+$conn = mysqli_connect($host, $user, $pass, $db, $port);
 
 if(!$conn){
     die("Database connection failed");
